@@ -10,6 +10,7 @@ body {
 /*image can't be found from pages - Landing.css (maybe move assets into pages?)*/
 .pt4 {
   background: url('assets/landing_bg.jpg') no-repeat center center fixed;
+
   background-size: 100%;
   position: absolute;
   left: 0;
