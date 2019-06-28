@@ -1,10 +1,9 @@
 import React from 'react';
 
-function Pt2() {
+function RegPt1() {
 
   return (
-    <div className="center">
-      <div className="pt2">
+      <div className="registration">
         <h2>
         <strong>Built by hackers, for hackers</strong>
         <br></br>
@@ -12,8 +11,7 @@ function Pt2() {
         </h2>
 
       </div>
-    </div>
   );
 }
 
-export default Pt2;
+export default RegPt1;
