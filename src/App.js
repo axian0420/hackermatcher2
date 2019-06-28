@@ -8,18 +8,18 @@ import NavigationBar from './components/NavigationBar';
 
 class App extends Component {
   render() {
-  return (
-    <div className="App">
+    return (
+      <div className="App">
 
-      <NavigationBar/>
-      <Todos/>
-      <Pt2/>
-      <Pt3/>
-      <Pt4/>
+        <NavigationBar />
+        <Todos />
+        <Pt2 />
+        <Pt3 />
+        <Pt4 />
 
-    </div>
-  );
-}
+      </div>
+    );
+  }
 }
 
 export default App;

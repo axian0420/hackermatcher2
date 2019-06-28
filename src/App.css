@@ -14,7 +14,7 @@ body {
 }
 
 #about-box h1{
-color:black;
+  color:black;
   text-align: center;
   font-size: 4rem;
   font-weight: 500;
@@ -92,7 +92,7 @@ margin-right: 30%;
 }
 
 #register {
-  background: url("C:/Users/s4rme/.vscode/testapp/src/assets/landing_bg.jpg") no-repeat center center fixed;
+  background: url("../assets/landing_bg.jpg") no-repeat center center fixed;
   background-size: 100%;
   position: absolute;
   left: 0;

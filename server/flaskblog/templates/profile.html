@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="content-section">
+		<div class="media">
+			<img class="rounded-circle account-img" src="{{ image_file }}">
+			<div class="media-body">
+				<h2 class="account-heading">{{ user.username }}</h2>
+				<p class="text-secondary">{{ user.email}} </p>
+			</div>
+		</div>
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="text" class="form-control" id="messageInput" placeholder="Message">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+	</div>
+    <script>
+        // ajax post request for sending message to user
+        $(function() {
+            const user_id_url = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+            //console.log(Flask.url_for('chats.chat', user_id=user_id_url));
+            $('form').on('submit', function(event) {
+                requestUrl = "{{url_for('chats.new_private_chat', user_id='')}}";
+                requestUrl += user_id_url
+                $.ajax({
+                    data : {
+                        message : $('#messageInput').val()
+                    },
+                    type : 'POST',
+                    url: requestUrl
+                })
+                .done(function(data) {
+                    console.log(data);
+                }).fail((error)=>{
+                    console.log(error);
+                });
+                
+                event.preventDefault();
+
+            });
+        });
+
+    </script>
+{% endblock content %}
